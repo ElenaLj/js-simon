@@ -15,10 +15,10 @@ console.log(numArray);
 numContainer.innerHTML = "Tieni a mente questi numeri " + numArray;
 
 //timing function per svuotare il container dei numeri
-setTimeout(emptyContainer, 2000);
+setTimeout(emptyContainer, 30 * 1000);
 
 //timing function per far partire i prompt
-setTimeout(insertNumber, 5000);
+setTimeout(insertNumber, 31 * 1000);
 
 // ******************************* funzioni
 
