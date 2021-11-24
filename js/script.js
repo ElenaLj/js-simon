@@ -12,14 +12,13 @@ for (let i = 0; i < 5; i++){
 }
 
 console.log(numArray);
-numContainer.innerHTML = numArray;
+numContainer.innerHTML = "Tieni a mente questi numeri " + numArray;
 
 //timing function per svuotare il container dei numeri
 setTimeout(emptyContainer, 2000);
 
 //timing function per far partire i prompt
 setTimeout(insertNumber, 5000);
-
 
 // ******************************* funzioni
 
@@ -38,6 +37,9 @@ function insertNumber (){
     let userNumber = [];
     for (let i = 0; i < 5; i++){
         userNumber.push(parseInt(prompt("Inserisci un numero da 1 a 100")));
+        console.log(userNumber);
     }
-    console.log(userNumber);
+    //variabile di riferimento al div dei numeri indovinati
+    let yourNumbers = document.querySelector(".numbers");
+    yourNumbers.innerHTML += "I numeri che hai inserito sono: " + userNumber;
 }
