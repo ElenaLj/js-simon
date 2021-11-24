@@ -3,7 +3,7 @@
 const numContainer = document.querySelector(".container");
 // console.log(numContainer);
 
-//invoco la funzione in un ciclo for perché mi servono 5 numeri random
+//array vuoto popolato con ciclo for
 let numArray = [];
 
 for (let i = 0; i < 5; i++){
@@ -14,8 +14,11 @@ for (let i = 0; i < 5; i++){
 console.log(numArray);
 numContainer.innerHTML = numArray;
 
-//timing function
-setTimeout(insertNumber, 2000);
+//timing function per svuotare il container dei numeri
+setTimeout(emptyContainer, 2000);
+
+//timing function per far partire i prompt
+setTimeout(insertNumber, 5000);
 
 
 // ******************************* funzioni
@@ -25,12 +28,16 @@ function getRandomNumber() {
     return Math.floor(Math.random() * 100) + 1;
 }
 
-//questa funzione fa partire il timer di 30s
-function insertNumber (){
+//questa funzione svuota il container
+function emptyContainer (){
     numContainer.innerHTML = "";
+}
 
+//questa funzione fa partire i prompt
+function insertNumber (){
     let userNumber = [];
     for (let i = 0; i < 5; i++){
-        userNumber.push(ParseInt(prompt("Inserisci un numero")));
+        userNumber.push(parseInt(prompt("Inserisci un numero da 1 a 100")));
     }
+    console.log(userNumber);
 }
