@@ -4,7 +4,7 @@ eccoci all'ultimo esercizio di JavaScript
 Esercizio di oggi: Simon Says nome repo: js-simon
 
 Descrizione:
-1. Visualizzare in pagina 5 numeri casuali. 
+1. Visualizzare in pagina 5 numeri casuali. √
 
 2. Da lì parte un timer di 30 secondi. Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
 
