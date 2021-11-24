@@ -28,5 +28,9 @@ function getRandomNumber() {
 //questa funzione fa partire il timer di 30s
 function insertNumber (){
     numContainer.innerHTML = "";
-    // const insertNumbers = parseInt(prompt("Inserisci i numeri appena visualizzati"));
+
+    let userNumber = [];
+    for (let i = 0; i < 5; i++){
+        userNumber.push(ParseInt(prompt("Inserisci un numero")));
+    }
 }
