@@ -1,3 +1,8 @@
+//variabile per il tempo 30s
+let time30 = 30;
+
+//variabile per il tempo 31s
+let time31 = 31;
 
 //variabile di riferimento al container dei numeri
 const numContainer = document.querySelector(".container");
@@ -15,10 +20,11 @@ console.log(numArray);
 numContainer.innerHTML = "Tieni a mente questi numeri " + numArray;
 
 //timing function per svuotare il container dei numeri
-setTimeout(emptyContainer, 30 * 1000);
+setTimeout(emptyContainer, time30 * 1000);
 
 //timing function per far partire i prompt
-setTimeout(insertNumber, 31 * 1000);
+setTimeout(insertNumber, time31 * 1000);
+
 
 // ******************************* funzioni
 
@@ -32,7 +38,8 @@ function emptyContainer (){
     numContainer.innerHTML = "";
 }
 
-//questa funzione fa partire i prompt
+// questa funzione fa partire i prompt
+
 function insertNumber (){
     let userNumber = [];
     for (let i = 0; i < 5; i++){
@@ -42,4 +49,6 @@ function insertNumber (){
     //variabile di riferimento al div dei numeri indovinati
     let yourNumbers = document.querySelector(".numbers");
     yourNumbers.innerHTML += "I numeri che hai inserito sono: " + userNumber;
+
+    return userNumber;
 }
